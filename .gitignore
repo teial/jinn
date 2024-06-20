@@ -1,0 +1,10 @@
+# Data saved from exchanges shouldn't be commited
+/data
+
+# Rust output
+/target
+
+# Idea stuff
+.zed
+.idea
+.vscode
