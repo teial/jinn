@@ -1,8 +1,7 @@
 mod error;
 
-use std::borrow::Cow;
-
 use jinn_provider::Provider;
+use log::info;
 use ureq::Agent;
 
 pub struct BinanceProvider {
@@ -30,10 +29,7 @@ impl Provider for BinanceProvider {
             .map_err(|_| error::Error::UpdateError)?
             .into_string()
             .map_err(|_| error::Error::UpdateError)?;
+        info!("Received data: {}", self.data);
         Ok(())
-    }
-
-    fn data(&self) -> Cow<str> {
-        Cow::from(&self.data)
     }
 }

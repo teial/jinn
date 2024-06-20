@@ -1,6 +1,9 @@
 # Data saved from exchanges shouldn't be commited
 /data
 
+# We also don't need the logs in our repository
+/log
+
 # Rust output
 /target
 
