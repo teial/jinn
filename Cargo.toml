@@ -1,3 +1,13 @@
+[package]
+name = "jinn"
+authors = ["Jinn Labs <owner@jinn.io>"]
+edition = "2021"
+version = "0.1.0"
+
 [workspace]
 members = ["jinn-provider", "jinn-provider-binance"]
 resolver = "2"
+
+[dependencies]
+clap = { version = "4.5.7", features = ["derive"] }
+tokio = { version = "1.38.0", features = ["full"] }
